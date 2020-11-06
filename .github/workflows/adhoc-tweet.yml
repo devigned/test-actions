@@ -11,4 +11,8 @@ jobs:
     steps:
       uses: devigned/go-twitter-action
         with:
-          message: Hello from adhoc action!
+          message: ${{ github.event.inputs.message }}
+          apiKey: ${{ secrets.ApiKey }}
+          apiKeySecret: ${{ secrets.ApiKeySecret }}
+          accessToken: ${{ secrets.AcessToken }}
+          accessTokenSecret: ${{ secrets.AcessTokenSecret }}
