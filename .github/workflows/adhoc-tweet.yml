@@ -9,7 +9,7 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: devigned/go-twitter-action@master
+      - uses: devigned/go-twitter-action@main
         with:
           message: ${{ github.event.inputs.message }}
           apiKey: ${{ secrets.API_KEY }}
