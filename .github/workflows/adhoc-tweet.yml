@@ -12,7 +12,7 @@ jobs:
       - uses: devigned/go-twitter-action
         with:
           message: ${{ github.event.inputs.message }}
-          apiKey: ${{ secrets.ApiKey }}
-          apiKeySecret: ${{ secrets.ApiKeySecret }}
-          accessToken: ${{ secrets.AcessToken }}
-          accessTokenSecret: ${{ secrets.AcessTokenSecret }}
+          apiKey: ${{ secrets.API_KEY }}
+          apiKeySecret: ${{ secrets.API_KEY_SECRET }}
+          accessToken: ${{ secrets.ACCESS_TOKEN }}
+          accessTokenSecret: ${{ secrets.ACCESS_TOKEN_SECRET }}
