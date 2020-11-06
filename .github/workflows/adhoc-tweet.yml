@@ -9,10 +9,10 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-      uses: devigned/go-twitter-action
-      with:
-        message: ${{ github.event.inputs.message }}
-        apiKey: ${{ secrets.ApiKey }}
-        apiKeySecret: ${{ secrets.ApiKeySecret }}
-        accessToken: ${{ secrets.AcessToken }}
-        accessTokenSecret: ${{ secrets.AcessTokenSecret }}
+      - uses: devigned/go-twitter-action
+        with:
+          message: ${{ github.event.inputs.message }}
+          apiKey: ${{ secrets.ApiKey }}
+          apiKeySecret: ${{ secrets.ApiKeySecret }}
+          accessToken: ${{ secrets.AcessToken }}
+          accessTokenSecret: ${{ secrets.AcessTokenSecret }}
