@@ -13,7 +13,7 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: devigned/go-twitter-action@main
+      - uses: devigned/go-twitter-action@v1
         env:
           DRY_RUN: ${{ github.event.inputs.dry-run }}
         with:
