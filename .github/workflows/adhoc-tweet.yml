@@ -5,11 +5,17 @@ on:
       message:
         description: 'message you want to tweet'
         required: true
+      dry-run:
+        description: 'to send a tweet or not to send a tweet, that is the question (true or false)'
+        required: false
+        default: false
 jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
       - uses: devigned/go-twitter-action@main
+        env:
+          DRY_RUN: ${{ github.event.inputs.dry-run }}
         with:
           message: ${{ github.event.inputs.message }}
           apiKey: ${{ secrets.API_KEY }}
